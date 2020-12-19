@@ -2,7 +2,7 @@
 Oak is a simple package manager for debian and debian based systems written in c++ and shell script.
 
 ### Version
-1.1
+0.71 (beta)
 
 ### 32-bit
 32-bit applications aren't supported yet.
