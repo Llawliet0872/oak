@@ -17,8 +17,8 @@ int main()
     {
         std::cout << "Use \"./oak help\" for seeing the options. \nThank you for using oak!" << std::endl;
     }
-	system("cd ..");
-	system("mv oak/ ~/.oak");
+    system("cd ..");
+    system("mv oak/ ~/.oak");
 
     return 0;
 }
