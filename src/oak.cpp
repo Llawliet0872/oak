@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 			}
 		}
 
-		if (command == "uninstall")
+		else if (command == "uninstall")
 		{
 			// Checking is the package is specified
 			if (argc <= 2)
