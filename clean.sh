@@ -1,2 +1,0 @@
-cd ..
-mv oak/ ~/.oak/
