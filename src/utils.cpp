@@ -5,7 +5,7 @@ void install(std::string package)
     // Initializing curl
     CURL *installer = curl_easy_init();
     long err_code;
-    std::string URL = "https://raw.githubusercontent.com/Llawliet0872/scripts/master/";
+    std::string URL = "https://raw.githubusercontent.com/Llawliet0872/scripts/master/install/";
     URL += package + ".sh";
     const char *url = URL.c_str();
     // Fetching the installation script from the specified URL
