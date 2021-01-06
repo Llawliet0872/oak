@@ -34,6 +34,42 @@ void install(std::string package)
     }
 }
 
+void install(std::string package)
+{
+    // Initializing curl
+    CURL *installer = curl_easy_init();
+    long err_code;
+    std::string URL = "https://raw.githubusercontent.com/Llawliet0872/scripts/master/uninstall/";
+    URL += package + ".sh";
+    const char *url = URL.c_str();
+    // Fetching the installation script from the specified URL
+    curl_easy_setopt(installer, CURLOPT_URL, url);
+    // Writing the fetched data to a file
+    FILE *file = fopen("uninstall.sh", "w");
+    curl_easy_setopt(installer, CURLOPT_WRITEDATA, file);
+    CURLcode res = curl_easy_perform(installer);
+    // Checking if an error occured
+    curl_easy_getinfo(installer, CURLINFO_RESPONSE_CODE, &err_code);
+    if (err_code == 404)
+    {
+        std::cout << "Package doesn't exist!" << std::endl;
+        remove("uninstall.sh");
+    }
+    else
+    {
+        // Closing the file
+        fclose(file);
+        // Running the script
+        system("chmod +x uninstall.sh");
+        system("./uninstall.sh");
+        // Cleaning up
+        curl_easy_cleanup(installer);
+        remove("uninstall.sh");
+    }
+}
+
+
+
 void search(std::string keyword)
 {
    // Initlializing curl
