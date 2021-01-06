@@ -5,9 +5,14 @@
 #pragma once
 
 /*
-    This function installs and executes the script for the specified package
+    This function installs packages
 */
 void install(std::string package);
+
+/*
+	This function uninstalls packages installed through oak
+*/
+void uninstall(std::string package);
 
 /*
     This function shows the lines which match a specified keyword 

@@ -34,7 +34,7 @@ void install(std::string package)
     }
 }
 
-void install(std::string package)
+void uninstall(std::string package)
 {
     // Initializing curl
     CURL *installer = curl_easy_init();

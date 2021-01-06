@@ -18,13 +18,29 @@ int main(int argc, char **argv)
 			}
 			else
 			{
-				char option; 
 				std::cout << "\nInstalling " << argv[2] << "..."
 						  << "\n"
 						  << std::endl;
 				install(argv[2]);
 			}
 		}
+
+		if (command == "uninstall")
+		{
+			// Checking is the package is specified
+			if (argc <= 2)
+			{
+				std::cout << "Package not specified!" << std::endl;
+			}
+			else
+			{
+				std::cout << "\nUninstalling " << argv[2] << "..."
+						  << "\n"
+						  << std::endl;
+				uninstall(argv[2]);
+			}
+		}
+
 		// Checking is the command is "list"
 		else if (command == "list")	
 		{
