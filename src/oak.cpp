@@ -50,7 +50,7 @@ int main(int argc, char **argv)
 		// Checking is the command is "help"
 		else if (command == "help")
 		{
-			std::cout << "Use \"oak search <name>\" to see if a package is available.\nUse \"oak list\" to see a list of the available packages. \nUse \"oak install <package>\" for installing new packages.\n\nIf you like oak and want to help it develop, you can contribute by adding packages to https://github.com/Llawliet0872/scripts." << std::endl;
+			std::cout << "Use \"oak search <name>\" to see if a package is available.\nUse \"oak list\" to see a list of the available packages. \nUse \"oak install <package>\" for installing new packages.\nUse \"oak uninstall <package>\" to uninstall a package that was installed through oak\n\nIf you like oak and want to help it develop, you can contribute by adding packages to https://github.com/Llawliet0872/scripts." << std::endl;
 		}
 
 		// Checking if the command is search
