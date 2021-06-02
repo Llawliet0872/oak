@@ -5,7 +5,7 @@ void install(std::string package)
     // Initializing curl
     CURL *installer = curl_easy_init();
     long err_code;
-    std::string URL = "https://raw.githubusercontent.com/Llawliet0872/scripts/master/install/";
+    std::string URL = "https://raw.githubusercontent.com/wwsmiff/scripts/master/install/";
     URL += package + ".sh";
     const char *url = URL.c_str();
     // Fetching the installation script from the specified URL
@@ -39,7 +39,7 @@ void uninstall(std::string package)
     // Initializing curl
     CURL *installer = curl_easy_init();
     long err_code;
-    std::string URL = "https://raw.githubusercontent.com/Llawliet0872/scripts/master/uninstall/";
+    std::string URL = "https://raw.githubusercontent.com/wwsmiff/scripts/master/uninstall/";
     URL += package + ".sh";
     const char *url = URL.c_str();
     // Fetching the installation script from the specified URL
@@ -76,7 +76,7 @@ void search(std::string keyword)
     CURL *fetcher = curl_easy_init();
     // Writing fetched data to a file
     FILE *temp = fopen("temp", "w");
-    curl_easy_setopt(fetcher, CURLOPT_URL, "https://raw.githubusercontent.com/Llawliet0872/scripts/master/packages.txt");
+    curl_easy_setopt(fetcher, CURLOPT_URL, "https://raw.githubusercontent.com/wwsmiff/scripts/master/packages.txt");
     curl_easy_setopt(fetcher, CURLOPT_WRITEDATA, temp);
     curl_easy_perform(fetcher);
     fclose(temp);
@@ -94,7 +94,7 @@ void list()
     // Initializing curl
     CURL *curl = curl_easy_init();
     // Fetching data 
-    curl_easy_setopt(curl, CURLOPT_URL, "https://raw.githubusercontent.com/Llawliet0872/scripts/master/packages.txt");
+    curl_easy_setopt(curl, CURLOPT_URL, "https://raw.githubusercontent.com/wwsmiff/scripts/master/packages.txt");
     curl_easy_perform(curl);
     // Cleanup
     curl_easy_cleanup(curl);
